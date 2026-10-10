@@ -1,0 +1,1 @@
+Python 3.13 local; numpy 2.4.4; scipy 1.17.1. CI uses Python 3.13 with the same pins. LaTeX article, amsmath/amsthm, lmodern, microtype, hyperref; TinyTeX local build. Floating results may vary in last digits. No external service is required to replay the checks.

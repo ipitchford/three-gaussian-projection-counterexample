@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0",
+  "version": "1.1.0-candidate",
+  "recordBoundary": "Publication intake and supplied dated research evidence; not backdated discovery",
+  "contributionMap": [
+    {
+      "claim": "Three-component Gaussian separation",
+      "unit": "statement",
+      "paperLocation": "Theorem 1",
+      "searches": [
+        {
+          "date": "2026-10-10",
+          "query": "Supplied exact-fraction and Gaussian-mixture projection-order searches; primary comparator refresh"
+        }
+      ],
+      "closestPriorWork": "Gu\u00e9ant two-component theorem; Pinelis finite-support case",
+      "verdict": "new-in-bounded-search"
+    },
+    {
+      "claim": "Shifted witness and smoothing",
+      "unit": "method",
+      "paperLocation": "Theorem 1 and Corollary 2",
+      "searches": [
+        {
+          "date": "2026-10-10",
+          "query": "Supplied polyhedral witness, convex order and Gaussian noise searches"
+        }
+      ],
+      "closestPriorWork": "Classical Jensen, half-normal and common-noise tools",
+      "verdict": "partially-known-cited"
+    }
+  ],
+  "sourcesReadInFull": [
+    {
+      "citation": "Gu\u00e9ant",
+      "date": "2026-10-10",
+      "readWhat": "Theorem 4 statement, applicable proof and section 4",
+      "evidenceLocator": "https://arxiv.org/pdf/2610.07404",
+      "usedFor": "Two-component boundary"
+    },
+    {
+      "citation": "Jourdain\u2013Pag\u00e8s",
+      "date": "2026-10-10",
+      "readWhat": "Theorem 1.1 implication chain",
+      "evidenceLocator": "https://arxiv.org/html/2410.07958v1",
+      "usedFor": "Necessary versus sufficient comparison"
+    },
+    {
+      "citation": "Koshevoy\u2013Mosler",
+      "date": "2026-10-10",
+      "readWhat": "Theorem 5.2 and Corollary 5.1",
+      "evidenceLocator": "https://wisostat.uni-koeln.de/sites/dep_econometrics/pdf_publikationen/1998_KoshevoyM98.pdf",
+      "usedFor": "Classical order distinction"
+    },
+    {
+      "citation": "Pinelis",
+      "date": "2026-10-10",
+      "readWhat": "Finite-support construction and separating function",
+      "evidenceLocator": "https://arxiv.org/html/2510.04269v3",
+      "usedFor": "Methodological antecedent"
+    }
+  ],
+  "limitationTriage": [
+    {
+      "limitation": "Implicit weights, thresholds and inconsistent status",
+      "closingQuestion": "Can bounded editorial revisions resolve these?",
+      "triedOrSearched": "Explicit proposition, smoothing fraction, updated current data and preserved originals",
+      "estimatedCost": "Short revision",
+      "cheap": true,
+      "decision": "CLOSED"
+    },
+    {
+      "limitation": "Final Jourdain\u2013Pag\u00e8s journal body uninspected",
+      "closingQuestion": "Did supplied access evidence close this?",
+      "triedOrSearched": "Supplied multi-route journal-access audit; primary arXiv v1 comparison",
+      "estimatedCost": "Uncertain lawful full-text access",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Version-specific caveat retained; no absolute priority claim."
+    },
+    {
+      "limitation": "External or formal assurance absent",
+      "closingQuestion": "Do internal reports establish it?",
+      "triedOrSearched": "Checked evidence provenance and replay scope",
+      "estimatedCost": "Separate assurance project",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Internal checks cannot establish either dimension."
+    },
+    {
+      "limitation": "No complete three-mixture classification",
+      "closingQuestion": "Required for the negative answer?",
+      "triedOrSearched": "Compared the universal implication with the counterexample statement",
+      "estimatedCost": "New research",
+      "cheap": false,
+      "decision": "OPEN",
+      "reasonOpen": "Not required; useful future project, not claimed."
+    }
+  ],
+  "extensionScout": {
+    "by": "Codex publication assessment",
+    "date": "2026-10-10",
+    "proposals": [
+      "Explicit family interval",
+      "Single-JSON diagnostic",
+      "Geometric explanation"
+    ],
+    "actions": [
+      "Implemented bounded exposition and diagnostic improvements; no expanded claim"
+    ]
+  }
+}

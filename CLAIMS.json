@@ -1,0 +1,23 @@
+{
+  "version": "1.1.0-candidate",
+  "claims": [
+    {
+      "id": "three-gaussian-separation",
+      "statement": "Every scalar projection of the explicit centred planar Gaussian is convex-order dominated by the three-component mixture, but the explicit convex witness reverses joint expectations by more than 37/18432.",
+      "locator": "paper.tex Theorem 1",
+      "evidence": "Analytic proof; finite corroboration only"
+    },
+    {
+      "id": "positive-definite-separation",
+      "statement": "Adding 10^-8 I to all four covariances preserves projected order and gives joint witness gap >16213/11520000.",
+      "locator": "paper.tex Corollary 2",
+      "evidence": "2-Lipschitz common-noise bound"
+    },
+    {
+      "id": "family",
+      "statement": "For weights p>2/3, q,r>0, p+q+r=1, compensated component scales yield an explicit nonempty separating threshold interval.",
+      "locator": "paper.tex Proposition 3",
+      "evidence": "Analytic density bound"
+    }
+  ]
+}

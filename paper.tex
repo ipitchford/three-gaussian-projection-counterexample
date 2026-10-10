@@ -1,0 +1,189 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\cx}{\preceq_{\mathrm{cx}}}
+\title{Projection tests fail for three centred Gaussian components}
+\author{Anonymous}
+\hypersetup{pdftitle={Projection tests fail for three centred Gaussian components},pdfauthor={Anonymous}}
+\date{10 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a centred Gaussian distribution on the plane and a mixture of three centred Gaussian distributions such that every one-dimensional projection is ordered in convex order, but the multivariate distributions are not. All covariance entries and mixture weights are rational. A maximum of six affine functions separates the distributions, with an explicit strictly positive expectation gap proved by elementary Gaussian identities and a density bound. Adding a specified common Gaussian noise gives an example with every covariance positive definite. Thus the projection criterion for comparison with two centred Gaussian components does not extend to three. The proof is analytic and uses neither numerical integration nor infeasibility of a restricted coupling certificate. The construction exploits the fact that rank-one projection inequalities depend on weight times standard deviation, whereas a small shift of a polyhedral convex function detects the allocation of probability mass among component lines. It therefore separates two features that homogeneous directional tests cannot distinguish.
+\end{abstract}
+\noindent\textbf{Keywords:} convex order; Gaussian mixtures; projection tests; polyhedral convex functions; counterexample; multivariate stochastic orders.
+
+\section{The comparison problem}
+For integrable random vectors, write $X\cx Y$ when $\E f(X)\le\E f(Y)$ for every finite-valued convex function $f$, allowing expectations in $(-\infty,+\infty]$. An affine lower bound makes these extended expectations well-defined. Equivalently one may use convex Lipschitz tests. Failure for one integrable convex test refutes this order. Projected convex order requires $u^TX\cx u^TY$ for every vector $u$.
+
+Jourdain and Pag\`es~\cite{JP} give intrinsic sufficient coupling conditions and necessary directional inequalities for comparison of a Gaussian distribution with a Gaussian mixture. Gu\'eant~\cite{G}, Theorem~4, proves that projected and full convex order coincide for a centred Gaussian compared with two centred Gaussian components, in every finite dimension. Section~4 of that paper leaves larger component counts open. We give a negative answer with three components in dimension two. The comparison with \cite{JP} is based on its inspected arXiv version; the published journal body was not accessible during the source check. The result below and its proof are independent of any assertion about that version's contents.
+
+The distinction between projected and full convex order is classical: Koshevoy and Mosler~\cite{KM} study the associated lift-zonoid order, and Pinelis~\cite{P} gives an explicit finite-support counterexample. Those antecedents do not provide the present comparison of one centred Gaussian with three centred Gaussian components. The contribution here is this constrained construction, not the general failure of projection tests.
+
+More precisely, the example satisfies the directional condition (1.7) of the inspected version of~\cite{JP}, but full centred convex order fails. Consequently its sufficient Gaussian-block condition (1.5) and its stronger comparison under every component-mean shift with weighted mean zero, (1.6), both fail. This follows from the implication chain in Theorem~1.1 there, since zero shifts are admissible. Our example does not decide whether full convex order can hold without that sufficient Gaussian-block certificate.
+
+For nonnegative numbers $s,s_i$ and positive weights $p_i$ summing to one,
+\begin{equation}\label{scalar}
+ N(0,s^2)\cx\sum_i p_iN(0,s_i^2)
+ \quad\Longleftrightarrow\quad s\le\sum_i p_i s_i.
+\end{equation}
+Indeed, necessity follows from the test $|x|$. For sufficiency put $m=\sum_i p_i s_i$. Gaussian variance comparison gives $N(0,s^2)\cx N(0,m^2)$ when $s\le m$, and Jensen's inequality applied to the same standard normal variable $Z$ gives $\E f(mZ)\le\sum_i p_i\E f(s_i Z)$.
+
+\section{An exact planar counterexample}
+\begin{theorem}\label{main}
+Let $X\sim N(0,\Sigma)$ and let $Y$ have distribution
+\[
+ \tfrac34 N(0,\Sigma_0)+\tfrac18 N(0,\Sigma_1)+\tfrac18 N(0,\Sigma_2),
+\]
+where
+\begin{align*}
+ \Sigma&=\begin{pmatrix}1/3&0\\0&1/9\end{pmatrix},&
+ \Sigma_0&=\begin{pmatrix}16/81&0\\0&0\end{pmatrix},\\
+ \Sigma_1&=\frac{16}{9}\begin{pmatrix}1&1\\1&1\end{pmatrix},&
+ \Sigma_2&=\frac{16}{9}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
+\end{align*}
+Then $u^TX\cx u^TY$ for every $u\in\mathbb R^2$, but $X\not\cx Y$. More precisely, the convex function
+\begin{equation}\label{witness}
+ \phi(x,y)=\max\{|x|+|y|-1/24,\,2|y|\}
+\end{equation}
+satisfies
+\begin{equation}\label{gap}
+ \E\phi(X)-\E\phi(Y)>\frac{37}{18432}>0.
+\end{equation}
+\end{theorem}
+
+The design uses the contact directions $a=0$ and $|a|=|b|$ in the projection inequality: these are precisely $y,x+y,x-y$, the forms making up $\phi_0$ below. At threshold zero their expectations agree. A positive shift then compares active probabilities $2/3$ for the target and $3/4$ for the mixture, creating the strict gap.
+
+\begin{proof}
+The component covariances are the outer products of $(4/9,0)^T$, $(4/3,4/3)^T$, and $(4/3,-4/3)^T$, respectively. They are positive semidefinite, the target is positive definite, and all weights are positive.
+
+\paragraph{Every direction.}
+For $u=(a,b)^T$, the target standard deviation is $\frac13\sqrt{3a^2+b^2}$. The weighted sum of component standard deviations equals
+\[
+ \frac13|a|+\frac16|a+b|+\frac16|a-b|
+ =\frac13\bigl(|a|+\max\{|a|,|b|\}\bigr).
+\]
+Thus it suffices, by \eqref{scalar}, to prove
+\begin{equation}\label{directions}
+ \sqrt{3a^2+b^2}\le |a|+\max\{|a|,|b|\}.
+\end{equation}
+If $|b|\le|a|$, the squared right side is $4a^2\ge3a^2+b^2$. If $|b|\ge|a|$, the squared right side minus $3a^2+b^2$ is $2|a|(|b|-|a|)\ge0$. This includes every real direction, including zero.
+
+\paragraph{The homogeneous starting point.}
+Put $c=\E|Z|=\sqrt{2/\pi}<1$ for $Z\sim N(0,1)$, and define $\phi_t(x,y)=\max\{|x|+|y|-t,2|y|\}$ for $t\ge0$. The identity
+\[
+ \phi_0(x,y)=|y|+\tfrac12\bigl(|x+y|+|x-y|\bigr)
+\]
+shows that $\E\phi_0(X)=c$: the standard deviations of $X_2$, $X_1+X_2$, and $X_1-X_2$ are $1/3$, $2/3$, and $2/3$.
+
+Under the horizontal component of $Y$, the function is $((4/9)|Z|-t)_+$. Under either diagonal component it is $(8/3)|Z|$, independently of $t$. Hence
+\begin{equation}\label{mixture-expectation}
+ \E\phi_t(Y)=\tfrac34\E((4/9)|Z|-t)_++\tfrac23 c,
+ \qquad \E\phi_0(Y)=c.
+\end{equation}
+
+\paragraph{A strict gap after shifting.}
+Let $T=(|X_1|-|X_2|)_+$. Then $\phi_t(X)=2|X_2|+(T-t)_+$. For independent standard normals $Z_1,Z_2$, rotational symmetry gives
+\[
+ \Pp(T>0)=\Pp(\sqrt3|Z_1|>|Z_2|)
+ =\frac{4\arctan\sqrt3}{2\pi}=\frac23.
+\]
+Since $(T-t)_+\ge T-t\mathbf1_{\{T>0\}}$,
+\begin{equation}\label{target-bound}
+ \E\phi_t(X)\ge c-\tfrac23t.
+\end{equation}
+The nonnegative variable $A=(4/9)|Z|$ has density bounded by $(9/4)c$. It follows that
+\[
+ \E(t-A)_+=\int_0^t(t-s)f_A(s)\,ds\le\tfrac98 c t^2.
+\]
+Using $(A-t)_+=A-t+(t-A)_+$ in \eqref{mixture-expectation} gives
+\[
+ \E\phi_t(Y)\le c-\tfrac34t+\tfrac{27}{32}ct^2.
+\]
+Together with \eqref{target-bound}, this yields
+\begin{equation}\label{general-gap}
+ \E\phi_t(X)-\E\phi_t(Y)\ge\tfrac1{12}t-\tfrac{27}{32}ct^2.
+\end{equation}
+At $t=1/24$ the right side is strictly greater than
+\[
+ \frac1{288}-\frac{27}{18432}=\frac{37}{18432}.
+\]
+Finally, $\phi_t$ is the maximum of the six affine functions $\pm x\pm y-t$ (four independent sign choices) and $\pm2y$. It is convex and $2$-Lipschitz in Euclidean norm. Its expectations are therefore finite, so \eqref{gap} refutes full convex order.
+\end{proof}
+
+\section{Positive definite components and the mechanism}
+\begin{corollary}\label{smooth}
+Replace each of the four covariances in Theorem~\ref{main} by that covariance plus $10^{-8}I_2$. Every resulting covariance is positive definite. All projected convex orders still hold, while the same function \eqref{witness} has a strictly reversed expectation.
+\end{corollary}
+\begin{proof}
+Let $G$ be an independent standard planar Gaussian and put $X_\delta=X+\sqrt\delta G$ and, separately in law, $Y_\delta=Y+\sqrt\delta G$. Adding the same independent scalar noise preserves convex order of each projection: for a convex scalar $f$, the function $r\mapsto\E f(r+\sqrt\delta\,u^TG)$ is convex. Therefore every projected comparison is preserved.
+
+The Lipschitz bound gives
+\[
+ |\E\phi(X_\delta)-\E\phi(X)|\le2\sqrt\delta\,\E\|G\|,
+\]
+and the same bound holds for $Y$. By Cauchy--Schwarz, $\E\|G\|\le\sqrt2<3/2$. At $\delta=10^{-8}$ the new gap is therefore strictly greater than
+\[
+ \frac{37}{18432}-\frac6{10000}=\frac{16213}{11520000}>0.
+\]
+All covariance matrices are positive definite after adding $\delta I_2$.
+\end{proof}
+
+The construction preserves the weighted standard deviation on each component line while changing the probability assigned to that line. Directional comparisons depend on the products of these two quantities. The shift in $\phi_t$ detects their separation: initially it reduces the target expectation at rate $2/3$, but the mixture expectation at rate $3/4$. The bounded half-normal density controls the second-order remainder explicitly.
+
+\begin{proposition}[An explicit separating family]\label{family}
+For $p>2/3$ and positive $q,r$ with $p+q+r=1$, assign weights $p,q,r$, respectively, to the centred Gaussian components with covariance factors
+\[
+ (1/(3p),0)^T,\qquad (1/(6q),1/(6q))^T,\qquad
+ (1/(6r),-1/(6r))^T
+\]
+and their outer products as covariances, keeping $\Sigma$ fixed. All projected convex orders hold, but the witness $\phi_t$ separates the joint laws whenever
+\[
+0<t<\frac{2(p-2/3)}{3p^2\sqrt{2/\pi}}.
+\]
+\end{proposition}
+\begin{proof}
+The products of weights and component factors leave the directional expression unchanged. The horizontal half-normal scale is $1/(3p)$, with density bounded by $3pc$. The preceding proof therefore gives
+\[
+ \E\phi_t(X)-\E\phi_t(Y)
+ \ge (p-2/3)t-\tfrac32p^2ct^2>0
+\]
+on the displayed interval.\end{proof}
+We make no sufficiency claim for weights at most $2/3$.
+
+\paragraph{Scope and limitations.}
+Theorem~\ref{main} resolves the universal three-component planar implication negatively. Together with the two-component theorem in~\cite{G}, it identifies the sharp component-count boundary in this setting. Embedding into higher dimensions preserves the counterexample, and splitting a positive mixture weight permits any larger number of labelled components, with repeated components allowed. The proof does not characterise all mixtures for which projection tests suffice. The present source search supports novelty only within its recorded coverage; the final journal text of~\cite{JP} remains uninspected. No numerical estimate is needed for any theorem here.
+
+\paragraph{Research declarations.}
+The proof and explicit inputs are contained in this manuscript; the accompanying package supplies source checks and optional numerical diagnostics. Codex AI agents contributed derivation, internal checking, source investigation and drafting. Scholarly attribution is Anonymous. This is an unrefereed candidate, not a formally verified theorem or human-peer-reviewed article. No funding or conflict-of-interest declaration was supplied; none is inferred.
+
+\begin{thebibliography}{9}
+\bibitem{G} O. Gu\'eant.
+\emph{Convex Order Beyond Dimension One: Projection Tests, Counterexamples and Gaussian Mixtures}.
+arXiv:2610.07404v1, 2026.
+\href{https://doi.org/10.48550/arXiv.2610.07404}{doi:10.48550/arXiv.2610.07404}.
+
+\bibitem{JP} B. Jourdain and G. Pag\`es.
+\emph{Convex comparison of Gaussian mixtures}.
+Journal of Multivariate Analysis 209 (2025), 105448.
+\href{https://doi.org/10.1016/j.jmva.2025.105448}{doi:10.1016/j.jmva.2025.105448}.
+Inspected text: \href{https://arxiv.org/abs/2410.07958v1}{arXiv:2410.07958v1} (2024).
+\bibitem{KM} G. Koshevoy and K. Mosler.
+Lift zonoids, random convex hulls and the variability of random vectors.
+\emph{Bernoulli} 4(3) (1998), 377--399.
+\href{https://wisostat.uni-koeln.de/sites/dep_econometrics/pdf_publikationen/1998_KoshevoyM98.pdf}{Author-hosted text}.
+\bibitem{P} I. Pinelis.
+\emph{Does the convex order between the distributions of linear functionals imply the convex order between the probability distributions over $\mathbb R^d$?}
+\href{https://arxiv.org/abs/2510.04269v3}{arXiv:2510.04269v3}, 2025.
+\end{thebibliography}
+\end{document}

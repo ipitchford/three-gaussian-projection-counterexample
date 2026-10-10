@@ -1,0 +1,1 @@
+Original manuscript, explanatory documents, structured data and original diagrams: CC0-1.0. Original code and supplied AI-generated audit code adapted here: MIT. Python, NumPy, SciPy and LaTeX packages retain upstream licences and are dependencies, not relicensed payloads. Third-party cited paper bodies and historical reviewer reports are not redistributed in this archive.

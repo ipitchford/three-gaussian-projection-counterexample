@@ -1,0 +1,42 @@
+{
+  "title": "Projection tests fail for three centred Gaussian components",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Anonymous"
+    }
+  ],
+  "version": "1.1.0-candidate",
+  "publication_date": "2026-10-10",
+  "license": "cc-zero",
+  "description": "<p>Unrefereed analytic counterexample: one centred planar Gaussian is below a mixture of three centred Gaussians in every projected convex order but not in multivariate convex order. Exact rational covariances and a six-affine-function witness give a strict expectation gap. A specified common-noise perturbation makes every covariance positive definite. Internal exact checks and uncertified quadrature corroborate the written proof; no formal verification, external peer review or absolute priority is claimed. Comparison with Jourdain\u2013Pag\u00e8s is to arXiv v1, not the unavailable final journal body.</p>",
+  "keywords": [
+    "convex order",
+    "Gaussian mixtures",
+    "projection tests",
+    "counterexample"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ipitchford/three-gaussian-projection-counterexample",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.48550/arXiv.2610.07404",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1016/j.jmva.2025.105448",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.2510.04269",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}

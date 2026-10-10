@@ -1,0 +1,3 @@
+Rejected semantic mutation: wrong-weight
+Rejected semantic mutation: wrong-gap
+{"status": "passed", "exactChecks": 18, "numericalRows": 12, "negativeControls": 2, "optimized": true, "gapDiagnostic": 0.003332911414158146, "scope": "Internal finite checks; no formal proof or certified quadrature."}
